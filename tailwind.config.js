@@ -17,10 +17,26 @@ module.exports = {
           900: "#331613",
         },
         green: "#13ce66",
-        gray: "#BBBBBB",
-        "gray-light": "#F8F8F8",
+        // gray: "#BBBBBB",
+        gray: {
+          100: "#F8F8F8",
+          200: "#e4e4e4",
+          300: "#d6d6d6",
+          400: "#c9c9c9",
+          500: "#bbbbbb",
+          600: "#969696",
+          700: "#707070",
+          800: "#4b4b4b",
+          900: "#252525",
+        },
         black: "#111111",
       },
+    },
+    zIndex: {
+      "-1": "-1",
+    },
+    borderWidth: {
+      1: "1px",
     },
   },
   plugins: [
