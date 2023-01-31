@@ -5,7 +5,8 @@ import RecipePreferences from "./RecipePreferences";
 import Notes from "./Notes";
 import DeliveryDetails from "./DeliveryDetails";
 import { FormProvider, SubmitHandler, useForm } from "react-hook-form";
-import SecondaryButton from "../../components/SecondaryButton";
+import ContactInfo from "./ContactInfo";
+import Payment from "./Payment";
 
 export interface PrescriptionFormState {
   delivery_date: DeliveryDate;
@@ -52,34 +53,8 @@ export default function Prescription() {
             </div>
           </div>
           <div className="col-span-2">
-            <div className="form-box">
-              <h3 className="font-bold mb-4">Need help with ordering?</h3>
-              <p className="mb-4">
-                We are active from Monday to Friday from 9.00 to 20.00
-              </p>
-              <a className="block mb-4" href="tel:+39 02 8295 4165">
-                +39 02 8295 4165
-              </a>
-              <a className="block mb-4" href="mailto: info@1000farmacie.it">
-                info@1000farmacie.it
-              </a>
-              <SecondaryButton>I would like more information</SecondaryButton>
-              <SecondaryButton>Remind me later</SecondaryButton>
-              <SecondaryButton>Want to be contactedn</SecondaryButton>
-            </div>
-            <div className="form-box">
-              <h3 className="font-bold mb-4">Type of payment</h3>
-              <p className="mb-4">
-                Payment on delivery by cash or credit, debit or debit card.
-              </p>
-              <p className="font-bold text-green mb-4">Shipping is free!</p>
-              <button
-                type={"submit"}
-                className="bg-orange-500 hover:bg-orange-600 text-white font-black py-3 px-4 rounded-lg w-full text-lg"
-              >
-                Confirm your order
-              </button>
-            </div>
+            <ContactInfo />
+            <Payment />
           </div>
         </form>
       </FormProvider>
