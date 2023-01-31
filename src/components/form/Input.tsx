@@ -1,5 +1,5 @@
 import { useFormContext } from "react-hook-form";
-import { ErrorMessage } from "@hookform/error-message";
+import FormError from "./FormError";
 
 type Props = {
   placeholder?: string;
@@ -55,9 +55,7 @@ export const Input = ({
             : undefined,
         })}
       />
-      <div className={"text-red-500"}>
-        <ErrorMessage errors={errors} name={name} />
-      </div>
+      <FormError errors={errors} name={name} />
     </div>
   );
 };

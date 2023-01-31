@@ -1,5 +1,5 @@
-import { ErrorMessage } from "@hookform/error-message";
 import { useFormContext } from "react-hook-form";
+import FormError from "./FormError";
 
 type Props = {
   name: string;
@@ -35,9 +35,7 @@ export default function Radio({
           <span className="text-sm ">{caption}</span>
         </div>
       </label>
-      <div className={"text-red-500"}>
-        <ErrorMessage errors={errors} name={name} />
-      </div>
+      <FormError errors={errors} name={name} />
     </div>
   );
 }

@@ -1,6 +1,6 @@
-import { ErrorMessage } from "@hookform/error-message";
 import React from "react";
 import { useFormContext } from "react-hook-form";
+import FormError from "./FormError";
 
 type Props = {
   labelText: string;
@@ -48,9 +48,7 @@ export default function Select({
       >
         {labelText}
       </label>
-      <div className={"text-red-500"}>
-        <ErrorMessage errors={errors} name={name} />
-      </div>
+      <FormError errors={errors} name={name} />
     </div>
   );
 }

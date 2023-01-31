@@ -1,0 +1,340 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`prescription form renders correctly 1`] = `
+<div
+  className="py-6 px-40"
+>
+  <h2
+    className="font-bold text-xl mb-6"
+  >
+    Prescription
+  </h2>
+  <form
+    className="grid grid-cols-5 gap-6"
+    onSubmit={[Function]}
+  >
+    <div
+      className="col-span-3"
+    >
+      <div
+        className="form-box"
+      >
+        <div
+          className="mb-4"
+        >
+          <legend
+            className="block font-bold mb-2"
+          >
+            Pharmacy details
+          </legend>
+          <div
+            className="relative z-0 w-full"
+          >
+            <select
+              className=" block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 h-16"
+              defaultValue=""
+              name="pharmacy"
+              onBlur={[Function]}
+              onChange={[Function]}
+              placeholder=""
+            >
+              <option
+                disabled={true}
+                hidden={true}
+                value=""
+              />
+              <option
+                value="A"
+              >
+                A
+              </option>
+              <option
+                value="B"
+              >
+                B
+              </option>
+            </select>
+            <label
+              className="absolute duration-300 top-0 left-3 origin-0 text-gray-500 text-sm"
+              htmlFor="pharmacy"
+            >
+              Choice Pharmacy
+            </label>
+          </div>
+        </div>
+        <fieldset
+          className="columns-2 mb-4"
+        >
+          <legend
+            className="block font-bold mb-2"
+          >
+            Recipe details
+          </legend>
+          <div
+            className=""
+          >
+            <input
+              className="
+        block
+        w-full
+        rounded-md
+        border-gray-300
+        shadow-sm
+        focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
+        h-16
+        bg-transparent z-1"
+              name="tax_code"
+              onBlur={[Function]}
+              onChange={[Function]}
+              placeholder="Your tax code"
+              type="number"
+            />
+          </div>
+          <div
+            className=""
+          >
+            <input
+              className="
+        block
+        w-full
+        rounded-md
+        border-gray-300
+        shadow-sm
+        focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
+        h-16
+        bg-transparent z-1"
+              name="recipe_number"
+              onBlur={[Function]}
+              onChange={[Function]}
+              placeholder="Enter the recipe number"
+              type="number"
+            />
+          </div>
+        </fieldset>
+        <fieldset
+          className="columns-2 mb-4"
+        >
+          <legend
+            className="block font-bold mb-2"
+          >
+            Recipe preferences
+          </legend>
+          <div>
+            <label
+              className="flex flex-row rounded-md px-4 py-2 border-1 border-gray-300 bg-transparent"
+            >
+              <input
+                className="mr-2 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                name="recipe_preferences"
+                onBlur={[Function]}
+                onChange={[Function]}
+                type="radio"
+                value="Originals"
+              />
+              <div
+                className="flex flex-col"
+              >
+                <span
+                  className=""
+                >
+                  Originals
+                </span>
+                <span
+                  className="text-sm "
+                >
+                  More expensive
+                </span>
+              </div>
+            </label>
+          </div>
+          <div>
+            <label
+              className="flex flex-row rounded-md px-4 py-2 border-1 border-gray-300 bg-transparent"
+            >
+              <input
+                className="mr-2 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                name="recipe_preferences"
+                onBlur={[Function]}
+                onChange={[Function]}
+                type="radio"
+                value="Generics"
+              />
+              <div
+                className="flex flex-col"
+              >
+                <span
+                  className=""
+                >
+                  Generics
+                </span>
+                <span
+                  className="text-sm "
+                >
+                  Less expensive
+                </span>
+              </div>
+            </label>
+          </div>
+        </fieldset>
+        <div
+          className="mb-4"
+        >
+          <legend
+            className="block font-bold mb-2"
+          >
+            Your notes
+          </legend>
+          <textarea
+            className=" block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+            name="notes"
+            onBlur={[Function]}
+            onChange={[Function]}
+            placeholder=""
+            rows={4}
+          />
+        </div>
+        <fieldset
+          className="columns-2"
+        >
+          <legend
+            className="block font-bold mb-2"
+          >
+            Delivery details
+          </legend>
+          <div
+            className="relative z-0 w-full"
+          >
+            <select
+              className=" block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 h-16"
+              defaultValue=""
+              name="delivery_date"
+              onBlur={[Function]}
+              onChange={[Function]}
+              placeholder=""
+            >
+              <option
+                disabled={true}
+                hidden={true}
+                value=""
+              />
+              <option
+                value="Jan 26 2023"
+              >
+                Jan 26 2023
+              </option>
+              <option
+                value="Jan 27 2023"
+              >
+                Jan 27 2023
+              </option>
+            </select>
+            <label
+              className="absolute duration-300 top-0 left-3 origin-0 text-gray-500 text-sm"
+              htmlFor="delivery_date"
+            >
+              Select Date
+            </label>
+          </div>
+          <div
+            className="relative z-0 w-full"
+          >
+            <select
+              className=" block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 h-16"
+              defaultValue=""
+              name="delivery_time"
+              onBlur={[Function]}
+              onChange={[Function]}
+              placeholder=""
+            >
+              <option
+                disabled={true}
+                hidden={true}
+                value=""
+              />
+            </select>
+            <label
+              className="absolute duration-300 top-0 left-3 origin-0 text-gray-500 text-sm"
+              htmlFor="delivery_time"
+            >
+              Time slot
+            </label>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+    <div
+      className="col-span-2"
+    >
+      <div
+        className="form-box"
+      >
+        <h3
+          className="font-bold mb-4"
+        >
+          Need help with ordering?
+        </h3>
+        <p
+          className="mb-4"
+        >
+          We are active from Monday to Friday from 9.00 to 20.00
+        </p>
+        <a
+          className="block mb-4"
+          href="tel:+39 02 8295 4165"
+        >
+          +39 02 8295 4165
+        </a>
+        <a
+          className="block mb-4"
+          href="mailto: info@1000farmacie.it"
+        >
+          info@1000farmacie.it
+        </a>
+        <button
+          className="border-orange-500 border-1 text-orange-500 hover:text-white hover:bg-orange-600 font-black py-3 px-4 rounded-lg w-full text-lg mb-4"
+          type="button"
+        >
+          I would like more information
+        </button>
+        <button
+          className="border-orange-500 border-1 text-orange-500 hover:text-white hover:bg-orange-600 font-black py-3 px-4 rounded-lg w-full text-lg mb-4"
+          type="button"
+        >
+          Remind me later
+        </button>
+        <button
+          className="border-orange-500 border-1 text-orange-500 hover:text-white hover:bg-orange-600 font-black py-3 px-4 rounded-lg w-full text-lg mb-4"
+          type="button"
+        >
+          Want to be contactedn
+        </button>
+      </div>
+      <div
+        className="form-box"
+      >
+        <h3
+          className="font-bold mb-4"
+        >
+          Type of payment
+        </h3>
+        <p
+          className="mb-4"
+        >
+          Payment on delivery by cash or credit, debit or debit card.
+        </p>
+        <p
+          className="font-bold text-green mb-4"
+        >
+          Shipping is free!
+        </p>
+        <button
+          className="bg-orange-500 hover:bg-orange-600 text-white font-black py-3 px-4 rounded-lg w-full text-lg"
+          type="submit"
+        >
+          Confirm your order
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+`;
