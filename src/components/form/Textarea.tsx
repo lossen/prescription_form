@@ -1,14 +1,12 @@
-import React from "react";
-import { TTextareaEvent } from "../../types";
+import { useFormContext } from "react-hook-form";
 
 type Props = {
-  onChange: (e: TTextareaEvent) => void;
   name: string;
-  value: string;
   required?: boolean;
 };
 
-export default function Textarea({ onChange, name, value, required }: Props) {
+export default function Textarea({ name, required = false }: Props) {
+  const { register } = useFormContext();
   return (
     <textarea
       className="
@@ -18,10 +16,9 @@ export default function Textarea({ onChange, name, value, required }: Props) {
         border-gray-300
         shadow-sm
         focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-      name={name}
-      value={value}
-      onChange={onChange}
-      required={required}
+      {...register(name, {
+        required: { value: required, message: "Required field" },
+      })}
     ></textarea>
   );
 }

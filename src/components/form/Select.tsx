@@ -1,11 +1,11 @@
+import { ErrorMessage } from "@hookform/error-message";
 import React from "react";
-import { TSelectEvent } from "../../types";
+import { useFormContext } from "react-hook-form";
 
 type Props = {
   labelText: string;
   name: string;
   children: React.ReactNode;
-  onChange: (e: TSelectEvent) => void;
   placeholder?: string;
   required?: boolean;
 };
@@ -14,15 +14,17 @@ export default function Select({
   labelText,
   name,
   children,
-  onChange,
   placeholder = "",
-  required,
+  required = false,
 }: Props) {
+  const {
+    register,
+    formState: { errors },
+  } = useFormContext();
+
   return (
     <div className="relative z-0 w-full">
       <select
-        required={required}
-        name={name}
         placeholder={placeholder}
         className="
         block
@@ -32,8 +34,10 @@ export default function Select({
         shadow-sm
         focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
         h-16"
-        onChange={onChange}
         defaultValue={""}
+        {...register(name, {
+          required: { value: required, message: "Required field" },
+        })}
       >
         <option disabled hidden value={""}></option>
         {children}
@@ -44,9 +48,9 @@ export default function Select({
       >
         {labelText}
       </label>
-      {/* <span class="text-sm text-red-600 hidden" id="error">
-        Email address is required
-      </span> */}
+      <div className={"text-red-500"}>
+        <ErrorMessage errors={errors} name={name} />
+      </div>
     </div>
   );
 }

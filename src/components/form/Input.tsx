@@ -1,28 +1,31 @@
-import React from "react";
-import { TInputEvent } from "../../types";
+import { useFormContext } from "react-hook-form";
+import { ErrorMessage } from "@hookform/error-message";
 
 type Props = {
-  value: string;
-  placeholder: string;
+  placeholder?: string;
   name: string;
-  onChange: (e: TInputEvent) => void;
-  required: boolean;
+  required?: boolean;
+  maxLength?: number;
+  minLength?: number;
+  pattern?: RegExp;
 };
 export const Input = ({
-  value,
   placeholder,
   name,
-  onChange,
-  required,
+  required = false,
+  maxLength,
+  minLength,
+  pattern,
 }: Props) => {
+  const {
+    register,
+    formState: { errors },
+  } = useFormContext();
+
   return (
     <div className="">
       <input
-        required={required}
-        value={value}
         type="number"
-        name={name}
-        onChange={onChange}
         placeholder={placeholder}
         className={`
         block
@@ -33,10 +36,28 @@ export const Input = ({
         focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
         h-16
         bg-transparent z-1`}
+        {...register(name, {
+          required: { value: required, message: "Required field" },
+          maxLength: maxLength
+            ? {
+                value: maxLength,
+                message: `Maximum ${maxLength} length`,
+              }
+            : undefined,
+          minLength: minLength
+            ? {
+                value: minLength,
+                message: `Minimum ${minLength} length`,
+              }
+            : undefined,
+          pattern: pattern
+            ? { value: pattern, message: "Incorrect format" }
+            : undefined,
+        })}
       />
-      {/* <span class="text-sm text-red-600 hidden" id="error">
-        Email address is required
-      </span> */}
+      <div className={"text-red-500"}>
+        <ErrorMessage errors={errors} name={name} />
+      </div>
     </div>
   );
 };
