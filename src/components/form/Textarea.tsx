@@ -3,12 +3,19 @@ import { useFormContext } from "react-hook-form";
 type Props = {
   name: string;
   required?: boolean;
+  placeholder?: string;
 };
 
-export default function Textarea({ name, required = false }: Props) {
+export default function Textarea({
+  name,
+  required = false,
+  placeholder = "",
+}: Props) {
   const { register } = useFormContext();
   return (
     <textarea
+      rows={4}
+      placeholder={placeholder}
       className="
         block
         w-full
